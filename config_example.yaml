@@ -1,0 +1,9 @@
+apiKey: #Your Linode API key.
+cpuThresh: #When should we start prepping a clone?
+ioThresh: #When should we start prepping a clone?
+bwThresh: # When should we start prepping a clone?
+wsThresh: # TBD, not sure how this is going to work out yet.
+cloneSize: # What size Linode do you want to spin up?
+swapIp: # Do you want to swap addresses?
+jsonPort:  # What port should we serve your JSON on?
+pushWait:  # How long should we wait before your information pushes to JSON?
