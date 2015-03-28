@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 import logging
 import time
+import sys
 from daemon import runner
+sys.path.append('mods')
+import cpu
+import confData
 
 # Daemon and main
 # Will Blew was here :P
@@ -18,7 +22,12 @@ class Autode():
 		while True:
 			# Do all of the things, well kind of. We'll be sure to modulize an such
 
-			# Please to be logging
+			#call action first for all checks
+			timeEnd = time.time() + 60 * 15
+			while time.time() < t_end:
+				action.doChecks()
+
+			# Please to be logging, we're going to strip this out in favor of a modulized logger.
 			log.debug("DEBUG: ")
 			log.info("INFO: ")
 			log.warn("WARNING: ")
